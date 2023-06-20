@@ -1,0 +1,106 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+td, th {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+.form-error {
+  color: red;
+}
+
+.input-field{
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size:20px;
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.login-body{
+  padding-left: 300px;
+}
+.login-head{
+  padding-left: 180px;
+}
+.login-button
+{
+  background-color: black;
+  color: white;
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size:20px;
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.add-button{
+  background-color: black;
+  margin-left: 280px;
+  margin-top: 100px;
+  color: white;
+  width: 300px;
+  padding: 12px 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size:20px;
+  box-sizing: border-box;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+h1{
+  margin-left: 280px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #090909;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #d32f2f;
+}
+
+.back-button:active {
+  background-color: #b71c1c;
+}
+
+p{
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.employee-details{
+  padding-left: 280px;
+}

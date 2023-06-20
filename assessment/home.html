@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div id="login-page">
+    <h1 class="login-head">Login</h1>
+    <div class="login-body">
+      <input class="input-field" type="text" id="username" placeholder="Username">
+      <input class="input-field" type="password" id="password" placeholder="Password">
+      <button class="login-button" onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <div id="table-page" style="display: none;">
+    <h1>Employee Details</h1>
+    <table id="employee-table">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Delete</th>
+      </tr>
+    </table>
+    <button class="add-button" onclick="addEmployeeForm()">Add Employee</button>
+  </div>
+
+  <div id="detail-page" style="display: none;">
+    <h1>Employee Details</h1>
+    <button class="back-button" onclick="goBack()">	&#60;Back</button>
+    <div class="employee-details" >
+      <p id="employee-name"></p>
+      <p id="employee-email"></p>
+      <p id="employee-mobile"></p>
+    </div>  
+  </div>
+
+  <div id="add-employee-page" style="display: none;">
+    <h1 class="login-head">Add Employee</h1>
+    <button class="back-button" onclick="goBack()">	&#60;Back</button>
+    <form onsubmit="addEmployee(event)">
+      <div class="login-body">
+        <input class="input-field" type="text" id="new-employee-name" placeholder="Name" required>
+        <input class="input-field" type="email" id="new-employee-email" placeholder="Email" required>
+        <input class="input-field" type="text" id="new-employee-mobile" placeholder="Mobile Number" required>
+        <button class="login-button" type="submit">Add</button>
+      </div>  
+    </form>
+  </div>
+
+  <script type="text/javascript" src="home.js">
+  </script>
+</body>
+</html>
