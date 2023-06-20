@@ -21,6 +21,18 @@
   row-gap: 40px;
 }
 
+@media (max-width: 750px){
+  .video-preview-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width : 1000px){
+  .video-preview-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .profile-picture {
   width: 40px;
   border-radius: 50px;
