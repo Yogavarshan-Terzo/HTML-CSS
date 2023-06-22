@@ -26,6 +26,15 @@ class Main{
         Thread t1 = new Thread(obj1);
         Thread t2 = new Thread(obj2);
 
+        System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
+
+        t1.setPriority(Thread.MIN_PRIORITY);
+        t2.setPriority(Thread.MAX_PRIORITY);
+
+        System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
+
         t1.start();
         t2.start();
 
