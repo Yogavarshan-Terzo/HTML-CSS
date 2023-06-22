@@ -20,15 +20,12 @@ class User implements Runnable{
         this.name = name;
         this.age = age;
         this.trainServices = trainServices;
-        Thread t = new Thread(this);
-        t.start();
-//        try {
-//            t.join();
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 
+    public void bookTicket(){
+        Thread T = new Thread(this);
+        T.start();
+    }
     public void run(){
         trainServices.bookTicket();
     }
@@ -39,7 +36,8 @@ public class ThreadAssessment {
         TrainServices trainServices = new TrainServices();
         User person1 = new User("yoga",20,trainServices);
         User person2 = new User("yuswanth",20,trainServices);
-        person1.run();
+        person1.bookTicket();
+        person2.bookTicket();
     }
 
 }
