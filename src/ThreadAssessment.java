@@ -3,7 +3,9 @@ class TrainServices{
     boolean bookingStarted = false;
     public synchronized void bookTicket(){
         while (bookingStarted){
-            try{wait();}catch (Exception e){}
+            try{wait();}catch (Exception e){
+                System.out.println(e.getMessage());
+            }
         }
         bookingStarted = true;
         System.out.println(Thread.currentThread().getName() + ": Ticket booked with id :" + id++);
@@ -14,7 +16,8 @@ class TrainServices{
 class User implements Runnable{
     String name;
     int age;
-    TrainServices trainServices = new TrainServices();
+
+    TrainServices trainServices;
 
     public User(String name, int age, TrainServices trainServices) {
         this.name = name;
@@ -35,7 +38,7 @@ public class ThreadAssessment {
     public static void main(String[] args) {
         TrainServices trainServices = new TrainServices();
         User person1 = new User("yoga",20,trainServices);
-        User person2 = new User("yuswanth",20,trainServices);
+        User person2 = new User("raja",20,trainServices);
         person1.bookTicket();
         person2.bookTicket();
     }
